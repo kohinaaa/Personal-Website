@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home — Neil Patrick P. Valenzuela</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="home-page">
+  <header>
+    <div class="title-logo">
+      <div class="pixel-logo"></div>
+      <h1>Neil Patrick P. Valenzuela</h1>
+    </div>
+    <p>BSIT Student • Aspiring Graphic Designer & Game Animator</p>
+  </header>
+
+  <nav>
+    <a href="index.html" class="active">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="projects.html">PROJECTS</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Welcome!</h2>
+      <p>Hello! I’m Neil, a creative and tech-driven BSIT student passionate about art, design, and games. Explore my
+        world of projects, creativity, and imagination.</p>
+      <a href="projects.html" class="btn">View work</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Neil Patrick P. Valenzuela — Pixel Portfolio</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => document.body.classList.add("fade-in"));
+    document.querySelectorAll("a").forEach(link => {
+      const href = link.getAttribute("href");
+      if (href && !href.startsWith("#") && !link.target) {
+        link.addEventListener("click", e => {
+          e.preventDefault();
+          document.body.style.opacity = 0;
+          setTimeout(() => window.location = href, 500);
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>
