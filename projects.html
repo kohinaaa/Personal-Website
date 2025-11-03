@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Neil Patrick P. Valenzuela</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="projects-page">
+  <header>
+    <div class="title-logo">
+      <div class="pixel-logo"></div>
+      <h1>Projects</h1>
+    </div>
+    <p>Creative Works & Systems</p>
+  </header>
+
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="projects.html" class="active">PROJECTS</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+
+  <main>
+    <section id="projects">
+      <h2>PROJECTS / WORKS</h2>
+      <p>Here are some of the academic and personal projects I’ve developed — demonstrating experience in programming,
+        web development, and system design.</p>
+
+      <div class="projects">
+        <!-- Project 1 -->
+        <div class="project">
+          <img src="Image3.png" alt="Gantt Chart System" class="project-img">
+          <h3>Gantt Chart System</h3>
+          <p>The <strong>Gantt Chart System</strong> is a desktop-based project scheduling tool written in
+            <strong>Python</strong>. It uses <strong>Tkinter</strong> for the GUI and <strong>Matplotlib</strong> for
+            chart visualization. This project demonstrates my ability to create interactive applications for time
+            management and task visualization.</p>
+          <a href="https://github.com/kohinaaa/Gantt-Chart-System.git" class="btn" target="_blank">View on GitHub</a>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project">
+          <img src="Image2.png" alt="Jack En Poy Game" class="project-img">
+          <h3>Jack En Poy Game</h3>
+          <p>The <strong>Jack En Poy Game</strong> is a console-based game developed in <strong>C language</strong>. It
+            implements conditional statements, random number generation, and loop structures to simulate a
+            Rock-Paper-Scissors battle between the player and the computer. This project highlights my understanding of
+            basic algorithms and logic flow.</p>
+          <a href="https://github.com/kohinaaa/Jack-en-Poy.git" class="btn" target="_blank">View on GitHub</a>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project">
+          <img src="Image4.png" alt="Pokedex System" class="project-img">
+          <h3>Pokédex System</h3>
+          <p>The <strong>Pokédex System</strong> is a web-based application that retrieves Pokémon data using the
+            <strong>PokéAPI</strong>. Built with <strong>HTML, CSS, and JavaScript</strong>, it allows users to search
+            for Pokémon and display details such as name, image, type, and abilities. This project demonstrates my
+            ability to work with APIs and asynchronous JavaScript.</p>
+          <a href="https://drive.google.com/drive/folders/1B4UophYkFq_cgj2UZmuqA5Yn6O1EW4-r?usp=sharing" class="btn"
+            target="_blank">View on Google Drive</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Neil Patrick P. Valenzuela — Pixel Portfolio</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => document.body.classList.add("fade-in"));
+    document.querySelectorAll("a").forEach(link => {
+      const href = link.getAttribute("href");
+      if (href && !href.startsWith("#") && !link.target) {
+        link.addEventListener("click", e => {
+          e.preventDefault();
+          document.body.style.opacity = 0;
+          setTimeout(() => window.location = href, 500);
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

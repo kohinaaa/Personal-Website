@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Neil Patrick P. Valenzuela</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="about-page">
+  <header>
+    <div class="title-logo">
+      <div class="pixel-logo"></div>
+      <h1>About Me</h1>
+    </div>
+    <p>Who I Am & My Journey</p>
+  </header>
+
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="about.html" class="active">ABOUT</a>
+    <a href="projects.html">PROJECTS</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+
+  <main>
+    <section id="about">
+      <div class="about-wrapper">
+        <img src="Image1.jpg" alt="Profile" class="profile-pic">
+        <div class="about-text">
+          <p>Hi! I'm <strong>Neil Patrick P. Valenzuela</strong>, a 21-year-old BSIT student at the Polytechnic
+            University of the Philippines in Calauan.</p>
+          <ul>
+            <li><strong>Born:</strong> March 20, 2004</li>
+            <li><strong>Elementary:</strong> Lamot Elementary School (2017)</li>
+            <li><strong>Junior High:</strong> Grace Christian Community School (2021)</li>
+            <li><strong>Senior High:</strong> Masapang Integrated National High School (2023)</li>
+            <li><strong>College:</strong> BSIT — PUP Calauan (3rd Year)</li>
+          </ul>
+          <p>My goal is to become a <strong>graphic designer</strong> and <strong>game animator</strong> — to create
+            visuals that tell stories, just like the games that inspired me growing up.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Neil Patrick P. Valenzuela — Pixel Portfolio</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => document.body.classList.add("fade-in"));
+    document.querySelectorAll("a").forEach(link => {
+      const href = link.getAttribute("href");
+      if (href && !href.startsWith("#") && !link.target) {
+        link.addEventListener("click", e => {
+          e.preventDefault();
+          document.body.style.opacity = 0;
+          setTimeout(() => window.location = href, 500);
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>
